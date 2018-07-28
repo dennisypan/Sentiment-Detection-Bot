@@ -55,7 +55,7 @@ def handle_command(command, channel):
 	
     # This is where you start to implement more commands!
 	
-	# Find country's population
+    # Determine sentiment of the command string (e.g. I love Indian food), and send response to Slack
     if command.startswith(command) and command != "help":
         temps = TextBlob(command)
         score = round(temps.sentiment.polarity, 4)
@@ -73,7 +73,7 @@ def handle_command(command, channel):
     
 	
 	
-    # display a list of commends that can be applied to the chatbot	
+    # On Slack, display a list of commends that can be applied to the chatbot	
     if command.startswith("help"):
         starting = "*BOT INSTRUCTIONS:*" + "\n" 
         helpcmd = "(1) *help* = see instructions on how to use this bot" + "\n" 
